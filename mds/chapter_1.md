@@ -11,7 +11,7 @@
 
 - 安装 Node.js v8.0 生产环境
  1. sudo apt-get update(升级环境配置)
- 2. sudo apt-get git vim openssl build-essential lib ssh-dev wget curl (依赖安装)
+ 2. sudo apt-get install git vim openssl build-essential libssh-dev wget curl (依赖安装)
  3. curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash (nvm安装)
  4. nvm常用指令
  ```
@@ -19,6 +19,7 @@ nvm ls(显示所有的node版本)
 nvm install v8.1.2 (安装node最新版本)
 nvm use v8.1.2 (使用最新版本)
 nvm alias defalult v8.1.2(设置默认版本)
+nvm: command not found (source ~/.bashrc)
  ```
  5. 防火墙相关操作
  ```
@@ -31,6 +32,7 @@ sudo ufw stop (关闭防火墙)
   1. [yarn安装指令](https://yarnpkg.com/en/docs/install#windows-stable)
 ```
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update && sudo apt-get install yarn
 yarn config set registry https://registry.npm.taobao.org (设置指向国内的源)
 yarn --version
