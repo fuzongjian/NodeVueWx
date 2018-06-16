@@ -42,11 +42,16 @@ sudo ufw stop (关闭防火墙)
 npm install vue-cli pm2 -g
 ```
 - 配置 Nginx 端口代理与域名指向
- 1. sudo apt-get isntlall nginx (安装)
- 2. nginx -v
- 3. sudo service nginx restart (重启)
- 4. nginx -s reload (配置文件重新加载)
-
+```
+<Linux>
+1、 sudo apt-get isntlall nginx (安装)
+2、 nginx -v
+3、 sudo service nginx restart (重启)
+4、 nginx -s reload (配置文件重新加载)
+<Mac>
+1、brew install nginx
+2、sudo services nginx start
+```
 - 安装 MongoDB 数据库 v3.4
 
 - 配置 Git 私有仓库管理代码
