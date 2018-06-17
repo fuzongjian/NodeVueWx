@@ -106,6 +106,6 @@ npm install vue-cli pm2 -g
   }
 }
 ```
- 2. 第一次发布执行   `pm2 deploy ecosystem.json production setup`
+ 2. 第一次发布执行    `pm2 deploy ecosystem.json production setup`
  3. 执行部署        `pm2 deploy ecosystem.json production`
  4. 更新部署        `pm2 deploy production update`
