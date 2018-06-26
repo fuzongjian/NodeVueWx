@@ -1,0 +1,28 @@
+{
+  "name": "nodevuewx",
+  "version": "1.0.0",
+  "description": "goog goog study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzongjian/NodeVueWx.git"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "fuzongjian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuzongjian/NodeVueWx/issues"
+  },
+  "homepage": "https://github.com/fuzongjian/NodeVueWx#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "eventproxy": "^1.0.0",
+    "express": "^4.16.3",
+    "superagent": "^3.8.3"
+  }
+}
