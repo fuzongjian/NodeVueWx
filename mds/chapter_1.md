@@ -31,22 +31,27 @@ sudo ufw stop (关闭防火墙)
 - 配置 Vue-Yarn-PM2 工具环境
   1. [yarn安装指令](https://yarnpkg.com/en/docs/install#windows-stable)
 ```
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
-yarn config set registry https://registry.npm.taobao.org (设置指向国内的源)
-yarn --version
+1、curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+2、echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+3、sudo apt-get update && sudo apt-get install yarn
+4、yarn config set registry https://registry.npm.taobao.org (设置指向国内的源)
+5、yarn --version
 ```
   2. vue-cli  pm2 安装
 ```
 npm install vue-cli pm2 -g
 ```
 - 配置 Nginx 端口代理与域名指向
- 1. sudo apt-get isntlall nginx (安装)
- 2. nginx -v
- 3. sudo service nginx restart (重启)
- 4. nginx -s reload (配置文件重新加载)
-
+```
+<Linux>
+1、 sudo apt-get isntlall nginx (安装)
+2、 nginx -v
+3、 sudo service nginx restart (重启)
+4、 nginx -s reload (配置文件重新加载)
+<Mac>
+1、brew install nginx
+2、sudo services nginx start
+```
 - 安装 MongoDB 数据库 v3.4
 
 - 配置 Git 私有仓库管理代码
@@ -101,6 +106,6 @@ npm install vue-cli pm2 -g
   }
 }
 ```
- 2. 第一次发布执行   `pm2 deploy ecosystem.json production setup`
+ 2. 第一次发布执行    `pm2 deploy ecosystem.json production setup`
  3. 执行部署        `pm2 deploy ecosystem.json production`
  4. 更新部署        `pm2 deploy production update`
