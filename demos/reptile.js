@@ -26,7 +26,6 @@ app.get('/1',function (req, res, next) {
 });
 // 使用eventproxy控制并发
 // url模块是node.js标准库里面的
-
 var url = require('url');
 var eventproxy = require('eventproxy');
 
