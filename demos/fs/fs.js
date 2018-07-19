@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs = require('demos/fs/fs');
 // 1. 文件读取
 var isExit = function () {
     fs.stat('reptile.js',function (err, stats) {
