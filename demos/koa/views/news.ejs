@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+这是一个ejs的模板引擎。（循环数据）
+<ul>
+    <%for(var i = 0; i < list.length; i ++){%>
+    <li><%=list[i]%></li>
+    <%}%>
+</ul>
+<h2>绑定html数据</h2>
+
+<%-content%>
+
+
+<h2>条件判断</h2>
+<%if(num>24){%>
+    大于24
+<%}else{%>
+    小于24
+<%}%>
+
+<h2>全局共享数据</h2>
+<%=userinfo%>
+</body>
+</html>
