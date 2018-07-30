@@ -9,14 +9,36 @@ render(app, {
     extname: '.html',//后缀名
     debug: process.env.NODE_ENV !== 'production'  // 是否开启调试模式
 });
-
+/*
+*  1、保存用户信息
+*  2、浏览器历史记录
+*  3、猜你喜欢的功能
+*  4、10天免登陆
+*  5、多个界面的数据传值
+*
+* */
 // app.use(async (ctx) => {
 //
 // });
 router.get('/', async(ctx) => {
+    // 设置cookies
+    ctx.cookies.set('userinfo','fuzongjian',{
+        maxAge:60*1000*60,  // 设置过期时间
+        //path:'/news', //  配置可以访问的页面
+        //domain:'.baidu.com',// 正常请情况下不要设置，
+        httpOnly: true;// true表示这个cookie只有服务器端可以访问，false表示客户端（.js）、服务器都可以访问方法
+    });
     ctx.body = 'hello world';
 })
-
+router.get('/news',async(ctx) =>{
+    // 拿到cookies
+    var userinfo = ctx.cookies.get('userinfo');
+    console.log(userinfo);
+})
+router.get('/shop',async(ctx) =>{
+    var userinfo = ctx.cookies.get('userinfo');
+    console.log(userinfo);
+})
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(3001,()=>{
