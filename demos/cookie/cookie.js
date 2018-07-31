@@ -23,10 +23,10 @@ render(app, {
 router.get('/', async(ctx) => {
     // 设置cookies
     ctx.cookies.set('userinfo','fuzongjian',{
-        maxAge:60*1000*60,  // 设置过期时间
+        //maxAge:60*1000*60,  // 设置过期时间
         //path:'/news', //  配置可以访问的页面
         //domain:'.baidu.com',// 正常请情况下不要设置，
-        httpOnly: true;// true表示这个cookie只有服务器端可以访问，false表示客户端（.js）、服务器都可以访问方法
+       // httpOnly: true;// true表示这个cookie只有服务器端可以访问，false表示客户端（.js）、服务器都可以访问方法
     });
     ctx.body = 'hello world';
 })
@@ -35,9 +35,12 @@ router.get('/news',async(ctx) =>{
     var userinfo = ctx.cookies.get('userinfo');
     console.log(userinfo);
 })
+// 设置中文（koa中没法直接设置中文的cookie）  base64转码
 router.get('/shop',async(ctx) =>{
-    var userinfo = ctx.cookies.get('userinfo');
-    console.log(userinfo);
+    var namedata = new Buffer('付宗建').toString('base64');
+    console.log(namedata);
+    var name = new Buffer(namedata,'base64').toString();
+    console.log(name);
 })
 app.use(router.routes());
 app.use(router.allowedMethods());
