@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0fc7eb2-5e55-46d5-90cb-a3bd723eb987" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/demos/session/session.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/demos/cookie/cookie.js" afterPath="$PROJECT_DIR$/demos/cookie/cookie.js" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,8 +39,8 @@
       <file leaf-file-name="session.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/session/session.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="610">
+              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -347,7 +344,7 @@
       <workItem from="1531826168528" duration="32280000" />
       <workItem from="1532480745004" duration="3198000" />
       <workItem from="1532518239518" duration="8855000" />
-      <workItem from="1532954015205" duration="6744000" />
+      <workItem from="1532954015205" duration="7459000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交。">
       <created>1529995445349</created>
@@ -398,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532955615238</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="session设置。">
+      <created>1533003318472</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1533003318472</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82464000" />
+    <option name="totallyTimeSpent" value="83179000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +481,8 @@
     <MESSAGE value="模板引擎ejs" />
     <MESSAGE value="art-template模板等。" />
     <MESSAGE value="cookie相关。" />
-    <option name="LAST_COMMIT_MESSAGE" value="cookie相关。" />
+    <MESSAGE value="session设置。" />
+    <option name="LAST_COMMIT_MESSAGE" value="session设置。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -824,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/session/session.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="610">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding />
         </state>
       </provider>
