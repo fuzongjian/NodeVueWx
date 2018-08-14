@@ -45,8 +45,21 @@ class DB{
         })
 
     }
-    update(){
-
+    update(colletionName,option,update){
+        return new Promise((resolve, reject) => {
+            this.connect().then((db)=>{
+                db.collection(colletionName).updateOne(option,{
+                    $set: update
+                },(err,result)=>{
+                    if(err){
+                        reject(err);
+                    }else{
+                        console.log(result);
+                        resolve(result);
+                    }
+                })
+            })
+        })
     }
     insert(collectionName,json){
         return new Promise((resolve, reject) => {
@@ -58,6 +71,15 @@ class DB{
                         resolve(result);
                     }
                 })
+            })
+        })
+    }
+    delete(collectionName,option){
+        return new Promise((resolve, reject) => {
+            this.connect().then((db)=>{
+                db.collection(collectionName).remove(option,((err,result)=>{
+                    
+                }))
             })
         })
     }
