@@ -10,8 +10,8 @@ const CONFIG = {
     /** Warning: If a session cookie is stolen, this cookie will never expire */
     maxAge: 5000, /** cookie的过期时间  maxAge is ms（default is 1 days）*/
     overwrite: true, /** (boolean) can overwrite or not (default true) */
-    httpOnly: true, /** (boolean) httpOnly or not (default true) */
-    signed: true, /** (boolean) signed or not (default true) */
+    httpOnly: true, /** (boolean) httpOnly or not (default true) true表示只有服务器端可以获取cookie */
+    signed: true, /** (boolean) signed or not (default true) 默认 签名*/
     rolling: false, /** 在每次请求时强行设置cookie，这将充值cookie过期时间(default is false) */
     renew: false, /** (boolean) renew 一般设置为true*/
 };
