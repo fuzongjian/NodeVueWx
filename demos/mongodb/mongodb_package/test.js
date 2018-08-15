@@ -12,7 +12,10 @@ router.get('/',async(ctx)=> {
     let result = await DB.insert('department',{'name': '体育部'})
     ctx.body = result;
 }).get('/update',async(ctx)=>{
-    let result = await DB.update('department',{"name" : "体育部"},{"name" : "Unity开发"});
+    let result = await DB.update('department',{"name" : "美术小组"},{"name" : "通过name来更改数据"});
+    ctx.body = result;
+}).get('/delete',async(ctx)=>{
+    let result = await DB.delete('department',{name: 'iOS开发'});
     ctx.body = result;
 });
 

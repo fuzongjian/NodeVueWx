@@ -54,7 +54,6 @@ class DB{
                     if(err){
                         reject(err);
                     }else{
-                        console.log(result);
                         resolve(result);
                     }
                 })
@@ -78,7 +77,11 @@ class DB{
         return new Promise((resolve, reject) => {
             this.connect().then((db)=>{
                 db.collection(collectionName).remove(option,((err,result)=>{
-                    
+                    if(err){
+                        reject(err);
+                    }else{
+                        resolve(result);
+                    }
                 }))
             })
         })
